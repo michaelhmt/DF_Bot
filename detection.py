@@ -48,7 +48,7 @@ class vision:
        '17-Active': 'Assets/17-Active',
        'Quest-Enter': 'Assets/Quest-Enter',
        'Quest-Selection': 'Assets/Quest-Selection',
-       'Quest-Strat_01': 'Assets/Quest-Strat_01'                 #very image the bot can identify and click on 
+       'Quest-Strat_01': 'Assets/Quest-Strat_01'                 #every image the bot can identify and click on 
        } 
 
        self.templates = { k: cv2.imread(v, 0) for (k, v) in self.static_templates.items()} # images read by cv2 the 0 reads those images as grey scale
@@ -56,4 +56,45 @@ class vision:
        self.monitor =  {'top': 0, 'left': 0, 'width': 1920, 'height': 1080}
        self.screen = mss()
 
-       self.frame = none
+       self.frame = None
+
+ def convert_rgb_to_bgr(self, img):
+        return img[:, :, ::-1]
+
+    def take_screenshot(self):
+        sct_img = self.screen.grab(self.monitor)
+        img = Image.frombytes('RGB', sct_img.size, sct_img.rgb)
+        img = np.array(img)
+        img = self.convert_rgb_to_bgr(img)
+        img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        return img_gray
+
+    def refresh_frame(self):
+        self.frame = self.take_screenshot()
+
+def match_template(self, img_grayscale, template, threshold=0.9): #matches template in a greyscale image
+
+
+        res = cv2.matchTemplate(img_grayscale, template, cv2.TM_CCOEFF_NORMED)
+        matches = np.where(res >= threshold)
+        return matches
+
+def scaled_find_template(self, name, image=None, threshold=0.9, scales=[1.0, 0.9, 1.1]):
+        if image is None:
+            if self.frame is None:
+                self.refresh_frame()
+
+            image = self.frame
+
+        initial_template = self.templates[name]
+        for scale in scales:
+            scaled_template = cv2.resize(initial_template, (0,0), fx=scale, fy=scale)
+            matches = self.match_template(
+                image,
+                scaled_template,
+                threshold
+            )
+            if np.shape(matches)[1] >= 1:
+                return matches
+        return matches
