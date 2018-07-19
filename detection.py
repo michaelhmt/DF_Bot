@@ -4,7 +4,7 @@ from pillow import Image
 import mumpy as np 
 import time 
 
-class vision: 
+class detection: 
      def __init__(self):
        self.static_templates = {
        'Char_Select': 'Assets/Char_Select.png',
@@ -48,7 +48,8 @@ class vision:
        '17-Active': 'Assets/17-Active',
        'Quest-Enter': 'Assets/Quest-Enter',
        'Quest-Selection': 'Assets/Quest-Selection',
-       'Quest-Strat_01': 'Assets/Quest-Strat_01'                 #every image the bot can identify and click on 
+       'Quest-Strat_01': 'Assets/Quest-Strat_01', 
+       'Convo_Click-Zone': 'Assets/Convo_Click-Zone'                #every image the bot can identify and click on 
        } 
 
        self.templates = { k: cv2.imread(v, 0) for (k, v) in self.static_templates.items()} # images read by cv2 the 0 reads those images as grey scale
