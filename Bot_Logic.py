@@ -23,133 +23,176 @@ class Game:
     	time.sleep(0.5)
 
     	def find_Char(self): 
-    		return self.can_see_Object('Char_Select')
+    		matches =  self.detection.find_template('Char_Select')
+    		return np.shape(matches)[1] >= 1
 
     	def Menu-Quest(self): 
-    		return self.can_see_Object('Quest-Strat_01')
+    		matches =  self.detection.find_template('Quest-Strat_01')
+    		return np.shape(matches)[1] >= 1
 
     	def Select_Quest(self): 
-    		return self.can_see_Object('Quest-Selection')
+    		matches =  self.detection.find_template('Quest-Selection')
+    		return np.shape(matches)[1] >= 1
 
     	def Quest-Enter(self): 
-    		return self.can_see_Object('Quest-Enter')
+    		matches =  self.detection.find_template('Quest-Enter')
+    		return np.shape(matches)[1] >= 1
 
     	def Convo_Click-Zone(self): 
-    		return self.can_see_Object('Convo_Click-Zone')
+    		matches =  self.detection.find_template('Convo_Click-Zone')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive17(self): 
-    		return self.can_see_Object('17_Inactive')
+    		matches =  self.detection.find_template('17_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive16(self): 
-    		return self.can_see_Object('16_Inactive')
+    		matches =  self.detection.find_template('16_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive15(self): 
-    		return self.can_see_Object('15_Inactive')
+    		matches =  self.detection.find_template('15_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive14(self): 
-    		return self.can_see_Object('14_Inactive')
+    		matches =  self.detection.find_template('14_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive13(self): 
-    		return self.can_see_Object('13_Inactive')
+    		matches =  self.detection.find_template('13_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive12(self): 
-    		return self.can_see_Object('12_Inactive')
+    		matches =  self.detection.find_template('12_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive11(self): 
-    		return self.can_see_Object('11_Inactive')
+    		matches =  self.detection.find_template('11_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive10(self): 
-    		return self.can_see_Object('10_Inactive')
+    		matches =  self.detection.find_template('10_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive09(self): 
-    		return self.can_see_Object('09_Inactive')
+    		matches =  self.detection.find_template('09_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive08(self): 
-    		return self.can_see_Object('08_Inactive')
+    		matches =  self.detection.find_template('08_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive07(self): 
-    		return self.can_see_Object('07_Inactive')
+    		matches =  self.detection.find_template('07_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive06(self): 
-    		return self.can_see_Object('06_Inactive')
+    		matches =  self.detection.find_template('06_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive05(self): 
-    		return self.can_see_Object('05_Inactive')
+    		matches =  self.detection.find_template('05_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive04(self): 
-    		return self.can_see_Object('04_Inactive')
+    		matches =  self.detection.find_template('04_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive03(self): 
-    		return self.can_see_Object('03_Inactive')
+    		matches =  self.detection.find_template('03_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive02(self): 
-    		return self.can_see_Object('02_Inactive')
+    		matches =  self.detection.find_template('02_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Inactive01(self): 
-    		return self.can_see_Object('01_Inactive')
+    		matches =  self.detection.find_template('01_Inactive')
+    		return np.shape(matches)[1] >= 1
 
     	def Active17(self): 
-    		return self.can_see_Object('17-Active')
+    		matches =  self.detection.find_template('17-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active16(self): 
-    		return self.can_see_Object('16-Active')
+    		matches =  self.detection.find_template('16-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active15(self): 
-    		return self.can_see_Object('15-Active')
+    		matches =  self.detection.find_template('15-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active14(self): 
-    		return self.can_see_Object('14-Active')
+    		matches =  self.detection.find_template('14-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active13(self): 
-    		return self.can_see_Object('13-Active')
+    		matches =  self.detection.find_template('13-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active12(self): 
-    		return self.can_see_Object('12-Active')
+    		matches =  self.detection.find_template('12-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active11(self): 
-    		return self.can_see_Object('11-Active')
+    		matches =  self.detection.find_template('11-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active10(self): 
-    		return self.can_see_Object('10-Active')
+    		matches =  self.detection.find_template('10-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active09(self): 
-    		return self.can_see_Object('09-Active')
+    		matches =  self.detection.find_template('09-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active08(self): 
-    		return self.can_see_Object('08-Active')
+    		matches =  self.detection.find_template('08-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active07(self): 
-    		return self.can_see_Object('07-Active')
+    		matches =  self.detection.find_template('07-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active06(self): 
-    		return self.can_see_Object('06-Active')
+    		matches =  self.detection.find_template('06-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active05(self): 
-    		return self.can_see_Object('05-Active')
+    		matches =  self.detection.find_template('05-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active04(self): 
-    		return self.can_see_Object('04-Active')
+    		matches =  self.detection.find_template('04-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active03(self): 
-    		return self.can_see_Object('03-Active')
+    		matches =  self.detection.find_template('03-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active02(self): 
-    		return self.can_see_Object('02-Active')
+    		matches =  self.detection.find_template('02-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Active01(self): 
-    		return self.can_see_Object('01-Active')
+    		matches =  self.detection.find_template('01-Active')
+    		return np.shape(matches)[1] >= 1
 
     	def Finish_Qeust(self): 
-    		return self.can_see_Object('Finish_Qeust')
+    		matches =  self.detection.find_template('Finish_Qeust')
+    		return np.shape(matches)[1] >= 1
 
     	def Close_Loot(self): 
-    		return self.can_see_Object('Close_Loot')
+    		matches =  self.detection.find_template('Close_Loot')
+    		return np.shape(matches)[1] >= 1
 
     	def keep(self): 
-    		return self.can_see_Object('keep')
-    		
+    		matches =  self.detection.find_template('keep')
+    		return np.shape(matches)[1] >= 1
+
     	def Screen_Transition(self): 
-    		return self.can_see_Object('Screen_Transition')
+    		matches =  self.detection.find_template('Screen_Transition')
+    		return np.shape(matches)[1] >= 1
 
 
 
