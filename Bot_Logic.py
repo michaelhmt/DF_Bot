@@ -1,6 +1,10 @@
 import numpy as np 
 import time 
 
+AppendSCache = open('sequence_cache.txt','a')
+ClearSCache = open('sequence_cache.txt','w' )
+ReadSCache  = open('sequence_cache.txt','r' ).readlines()
+
 class Game: 
 
 	def __init__(self, detection, controller):
@@ -111,71 +115,105 @@ class Game:
     		return np.shape(matches)[1] >= 1
 
     	def Active17(self): 
-    		matches =  self.detection.find_template('17-Active')
+    		matches =  self.detection.find_template('17-Active') 
+    		AppendSCache.write('\n17') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active16(self): 
     		matches =  self.detection.find_template('16-Active')
+    		AppendSCache.write('\n16') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active15(self): 
     		matches =  self.detection.find_template('15-Active')
+    		AppendSCache.write('\n15') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active14(self): 
     		matches =  self.detection.find_template('14-Active')
+    		AppendSCache.write('\n14') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active13(self): 
     		matches =  self.detection.find_template('13-Active')
+    		AppendSCache.write('\n13') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active12(self): 
     		matches =  self.detection.find_template('12-Active')
+    		AppendSCache.write('\n12') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active11(self): 
     		matches =  self.detection.find_template('11-Active')
+    		AppendSCache.write('\n11') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active10(self): 
     		matches =  self.detection.find_template('10-Active')
+    		AppendSCache.write('\n10') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active09(self): 
     		matches =  self.detection.find_template('09-Active')
+    		AppendSCache.write('\n09') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active08(self): 
     		matches =  self.detection.find_template('08-Active')
+    		AppendSCache.write('\n08') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active07(self): 
     		matches =  self.detection.find_template('07-Active')
+    		AppendSCache.write('\n07') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active06(self): 
     		matches =  self.detection.find_template('06-Active')
+    		AppendSCache.write('\n06') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active05(self): 
     		matches =  self.detection.find_template('05-Active')
+    		AppendSCache.write('\n05') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active04(self): 
     		matches =  self.detection.find_template('04-Active')
+    		AppendSCache.write('\n04') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active03(self): 
     		matches =  self.detection.find_template('03-Active')
+    		AppendSCache.write('\n03') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active02(self): 
     		matches =  self.detection.find_template('02-Active')
+    		AppendSCache.write('\n02') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Active01(self): 
     		matches =  self.detection.find_template('01-Active')
+    		AppendSCache.write('\n02') 
+    		AppendSCache.close()
     		return np.shape(matches)[1] >= 1
 
     	def Finish_Qeust(self): 
