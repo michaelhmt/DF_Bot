@@ -3,7 +3,7 @@ import time
 
 AppendSCache = open('sequence_cache.txt','a')
 ClearSCache = open('sequence_cache.txt','w' )
-ReadSCache  = open('sequence_cache.txt','r' ).readlines()
+ReadSCache  = open('sequence_cache.txt','r' ).readlines
 
 class Game: 
 
@@ -28,22 +28,47 @@ class Game:
 
     	def find_Char(self): 
     		matches =  self.detection.find_template('Char_Select')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+40, y+60)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Menu-Quest(self): 
     		matches =  self.detection.find_template('Quest-Strat_01')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+60, y+10)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Select_Quest(self): 
     		matches =  self.detection.find_template('Quest-Selection')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+40, y+60)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Quest-Enter(self): 
     		matches =  self.detection.find_template('Quest-Enter')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+40, y+60)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Convo_Click-Zone(self): 
     		matches =  self.detection.find_template('Convo_Click-Zone')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+30, y+30)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive17(self): 
@@ -118,119 +143,165 @@ class Game:
     		matches =  self.detection.find_template('17-Active') 
     		AppendSCache.write('\n17') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active16(self): 
     		matches =  self.detection.find_template('16-Active')
     		AppendSCache.write('\n16') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active15(self): 
     		matches =  self.detection.find_template('15-Active')
     		AppendSCache.write('\n15') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active14(self): 
     		matches =  self.detection.find_template('14-Active')
     		AppendSCache.write('\n14') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active13(self): 
     		matches =  self.detection.find_template('13-Active')
     		AppendSCache.write('\n13') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active12(self): 
     		matches =  self.detection.find_template('12-Active')
     		AppendSCache.write('\n12') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active11(self): 
     		matches =  self.detection.find_template('11-Active')
     		AppendSCache.write('\n11') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active10(self): 
     		matches =  self.detection.find_template('10-Active')
     		AppendSCache.write('\n10') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active09(self): 
     		matches =  self.detection.find_template('09-Active')
     		AppendSCache.write('\n09') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active08(self): 
     		matches =  self.detection.find_template('08-Active')
     		AppendSCache.write('\n08') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active07(self): 
     		matches =  self.detection.find_template('07-Active')
     		AppendSCache.write('\n07') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active06(self): 
     		matches =  self.detection.find_template('06-Active')
     		AppendSCache.write('\n06') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active05(self): 
     		matches =  self.detection.find_template('05-Active')
     		AppendSCache.write('\n05') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active04(self): 
     		matches =  self.detection.find_template('04-Active')
     		AppendSCache.write('\n04') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active03(self): 
     		matches =  self.detection.find_template('03-Active')
     		AppendSCache.write('\n03') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active02(self): 
     		matches =  self.detection.find_template('02-Active')
     		AppendSCache.write('\n02') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Active01(self): 
     		matches =  self.detection.find_template('01-Active')
     		AppendSCache.write('\n02') 
     		AppendSCache.close()
+    		time.sleep(01)
     		return np.shape(matches)[1] >= 1
 
     	def Finish_Qeust(self): 
     		matches =  self.detection.find_template('Finish_Qeust')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+100, y+30)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Close_Loot(self): 
     		matches =  self.detection.find_template('Close_Loot')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+70, y+20)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def keep(self): 
     		matches =  self.detection.find_template('keep')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+60, y+20)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Screen_Transition(self): 
     		matches =  self.detection.find_template('Screen_Transition')
+    		x = matches[1][0]
+    		y = matches[0][0]
+    		self.controller.move_mouse(x+00, y+40)
+    		self.controller.left_mouse_click()
+    		time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
+
+
+    def run(self): 
+    	while True:
+    		self.detection.refresh_frame()
+    		if self state == 'not started' and self find_Char('Char_Select'):
+    			self.log('can see qeust giver')
+    			self
+    	
 
 
 
