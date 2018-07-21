@@ -30,11 +30,11 @@ class controller():
 		self.mouse.click(Button.left) 
 
 	def left_mouse_drag(self, start, end):
-	self.move_mouse(*start)
-	time.sleep(0.2)       #sleeps stop the mouse from moving so fast the game cannot track it
-	self.mouse.press(Button.left)
-	time.sleep(0.2)
-	self.move_mouse(*end)
-	time.sleep(0.2)
-	self.mouse.release(Button.left)
-	time.sleep(0.2) 
+	 self.move_mouse(*start)
+	 time.sleep(0.2)       #sleeps stop the mouse from moving so fast the game cannot track it
+	 self.mouse.press(Button.left)
+	 time.sleep(0.2)
+	 self.move_mouse(*end)
+	 time.sleep(0.2)
+	 self.mouse.release(Button.left)
+	 time.sleep(0.2) 
