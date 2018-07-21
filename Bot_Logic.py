@@ -16,6 +16,7 @@ class Game:
  ReadSCache  = open('sequence_cache.py','r' ).readlines()
  activerefresh = 01
  CaptureTBufferlimt = 06
+ global CaptureTBuffer
  CaptureTBuffer = 0
  NewPuzzle = True
  Bufferadd = 01
@@ -241,7 +242,7 @@ class Game:
 	        matches =  self.detection.find_template('17-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive17() \n Inactive17()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -250,7 +251,7 @@ class Game:
 	 matches =  self.detection.find_template('16-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive16() \n Inactive16()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -259,7 +260,7 @@ class Game:
 	 matches =  self.detection.find_template('15-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive15() \n Inactive15()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -268,7 +269,7 @@ class Game:
 	 matches =  self.detection.find_template('14-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive14() \n Inactive14()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -277,7 +278,7 @@ class Game:
 	 matches =  self.detection.find_template('13-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive13() \n Inactive13()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -286,7 +287,7 @@ class Game:
 	 matches =  self.detection.find_template('12-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive12() \n Inactive12()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -295,7 +296,7 @@ class Game:
 	 matches =  self.detection.find_template('11-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive11() \n Inactive11()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -304,7 +305,7 @@ class Game:
 	 matches =  self.detection.find_template('10-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive10() \n Inactive10()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -313,7 +314,7 @@ class Game:
 	 matches =  self.detection.find_template('09-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive09() \n Inactive09()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -322,7 +323,7 @@ class Game:
 	 matches =  self.detection.find_template('08-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive08() \n Inactive08()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -331,7 +332,7 @@ class Game:
 	 matches =  self.detection.find_template('07-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive07() \n Inactive07()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -340,7 +341,7 @@ class Game:
 	 matches =  self.detection.find_template('06-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive06() \n Inactive06()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -349,7 +350,7 @@ class Game:
 	 matches =  self.detection.find_template('05-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive05() \n Inactive05()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -358,7 +359,7 @@ class Game:
 	 matches =  self.detection.find_template('04-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive04() \n Inactive04()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -367,7 +368,7 @@ class Game:
 	 matches =  self.detection.find_template('03-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive03() \n Inactive03()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -376,7 +377,7 @@ class Game:
 	 matches =  self.detection.find_template('02-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive02() \n Inactive02()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
@@ -385,7 +386,7 @@ class Game:
 	 matches =  self.detection.find_template('01-Active')
 	AppendSCache.write('\nfrom Bot_Logic.y import Inactive01() \n Inactive01()') 
 	AppendSCache.close()
-	global CaptureTBuffer
+	#global CaptureTBuffer
 	CaptureTBuffer += 1
 	time.sleep(activerefresh)
 	return np.shape(matches)[1] >= 1
