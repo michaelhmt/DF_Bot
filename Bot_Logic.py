@@ -1,12 +1,23 @@
 import numpy as np 
 import time 
 
-AppendSCache = open('sequence_cache.txt','a')
-ClearSCache = open('sequence_cache.txt','w' )
-ReadSCache  = open('sequence_cache.txt','r' ).readlines
-activerefresh = 01
+#AppendSCache = open('sequence_cache.txt','a')
+#ClearSCache = open('sequence_cache.txt','w' )
+#ReadSCache  = open('sequence_cache.txt','r' ).readlines
+#activerefresh = 01
+#CaptureTBufferlimt = 06
+#CaptureTBuffer = 0
+#game enter = 0
 
 class Game: 
+
+AppendSCache = open('sequence_cache.py','a')
+ClearSCache = open('sequence_cache.py','w' )
+ReadSCache  = open('sequence_cache.py','r' ).readlines()
+activerefresh = 01
+CaptureTBufferlimt = 06
+CaptureTBuffer = 0
+NewPuzzle = True
 
 	def __init__(self, detection, controller):
         self.detection = detection
@@ -74,187 +85,272 @@ class Game:
 
     	def Inactive17(self): 
     		matches =  self.detection.find_template('17_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive16(self): 
     		matches =  self.detection.find_template('16_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive15(self): 
     		matches =  self.detection.find_template('15_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive14(self): 
     		matches =  self.detection.find_template('14_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive13(self): 
     		matches =  self.detection.find_template('13_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive12(self): 
     		matches =  self.detection.find_template('12_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive11(self): 
     		matches =  self.detection.find_template('11_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive10(self): 
     		matches =  self.detection.find_template('10_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive09(self): 
     		matches =  self.detection.find_template('09_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive08(self): 
     		matches =  self.detection.find_template('08_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive07(self): 
     		matches =  self.detection.find_template('07_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive06(self): 
     		matches =  self.detection.find_template('06_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive05(self): 
     		matches =  self.detection.find_template('05_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive04(self): 
     		matches =  self.detection.find_template('04_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive03(self): 
     		matches =  self.detection.find_template('03_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive02(self): 
     		matches =  self.detection.find_template('02_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Inactive01(self): 
     		matches =  self.detection.find_template('01_Inactive')
+            x = matches[1][0]
+            y = matches[0][0]
+            self.controller.move_mouse(x+30, y+30)
+            self.controller.left_mouse_click()
+            time.sleep(0.5)
     		return np.shape(matches)[1] >= 1
 
     	def Active17(self): 
     		matches =  self.detection.find_template('17-Active') 
-    		AppendSCache.write('\n17') 
+    		AppendSCache.write('\nInactive17()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active16(self): 
     		matches =  self.detection.find_template('16-Active')
-    		AppendSCache.write('\n16') 
+    		AppendSCache.write('\nInactive16()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active15(self): 
     		matches =  self.detection.find_template('15-Active')
-    		AppendSCache.write('\n15') 
+    		AppendSCache.write('\nInactive15()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active14(self): 
     		matches =  self.detection.find_template('14-Active')
-    		AppendSCache.write('\n14') 
+    		AppendSCache.write('\nInactive14()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active13(self): 
     		matches =  self.detection.find_template('13-Active')
-    		AppendSCache.write('\n13') 
+    		AppendSCache.write('\nInactive13()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active12(self): 
     		matches =  self.detection.find_template('12-Active')
-    		AppendSCache.write('\n12') 
+    		AppendSCache.write('\nInactive12()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active11(self): 
     		matches =  self.detection.find_template('11-Active')
-    		AppendSCache.write('\n11') 
+    		AppendSCache.write('\nInactive11()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active10(self): 
     		matches =  self.detection.find_template('10-Active')
-    		AppendSCache.write('\n10') 
+    		AppendSCache.write('\nInactive10()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active09(self): 
     		matches =  self.detection.find_template('09-Active')
-    		AppendSCache.write('\n09') 
+    		AppendSCache.write('\nInactive09()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active08(self): 
     		matches =  self.detection.find_template('08-Active')
-    		AppendSCache.write('\n08') 
+    		AppendSCache.write('\nInactive08()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active07(self): 
     		matches =  self.detection.find_template('07-Active')
-    		AppendSCache.write('\n07') 
+    		AppendSCache.write('\nInactive07()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active06(self): 
     		matches =  self.detection.find_template('06-Active')
-    		AppendSCache.write('\n06') 
+    		AppendSCache.write('\nInactive06()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active05(self): 
     		matches =  self.detection.find_template('05-Active')
-    		AppendSCache.write('\n05') 
+    		AppendSCache.write('\nInactive05()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active04(self): 
     		matches =  self.detection.find_template('04-Active')
-    		AppendSCache.write('\n04') 
+    		AppendSCache.write('\nInactive04()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active03(self): 
     		matches =  self.detection.find_template('03-Active')
-    		AppendSCache.write('\n03') 
+    		AppendSCache.write('\nInactive03()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active02(self): 
     		matches =  self.detection.find_template('02-Active')
-    		AppendSCache.write('\n02') 
+    		AppendSCache.write('\nInactive02()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active01(self): 
     		matches =  self.detection.find_template('01-Active')
-    		AppendSCache.write('\n02') 
+    		AppendSCache.write('\nInactive01()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
@@ -301,6 +397,7 @@ class Game:
     		return np.shape(matches)[1] >= 1
 
     	def capture(self):
+            ClearSCache.write('class Sequence')
     		self.detection.refresh_frame()
     		if self.Active01('01-Active'):
     			self.log('01 Active')
@@ -353,6 +450,10 @@ class Game:
     		elif self.Active17('17-Active'):
     			self.log('17 Active')
     			self.Active17()
+    		else CaptureTBuffer + 1 if CaptureTBuffer == CaptureTBufferlimt:
+    		     self.state == ('Puzzle complete')
+    		     self.log('Puzzle complete proberly')  
+
 
 
 
@@ -379,10 +480,15 @@ class Game:
     			self.log('clicking through convo')
     			self.ConvoClickZone() 
     			self.state = 'in Dialogue'
-    		elif self.state == 'in Dialogue' and self.GameTrigger('GameTrigger'):
-    			self.log('game has started')
-    			self.ConvoClickZone() 
-    			self.state = 'InGame'
+    		elif self.state == 'in Dialogue' and self.GameTrigger('GameTrigger') and NewPuzzle = True:
+    			self.log('game in progress')
+    			self.capture()
+    			self.state('In Capture mode') 
+    			NewPuzzle = False
+            elif self.state == 'Puzzle complete'
+    			self.log('Reading Cache')
+                from
+
 
 
 
