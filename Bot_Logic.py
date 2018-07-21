@@ -238,119 +238,119 @@ NewPuzzle = True
 
     	def Active17(self): 
     		matches =  self.detection.find_template('17-Active') 
-    		AppendSCache.write('\nInactive17()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive17() \n Inactive17()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active16(self): 
     		matches =  self.detection.find_template('16-Active')
-    		AppendSCache.write('\nInactive16()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive16() \n Inactive16()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active15(self): 
     		matches =  self.detection.find_template('15-Active')
-    		AppendSCache.write('\nInactive15()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive15() \n Inactive15()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active14(self): 
     		matches =  self.detection.find_template('14-Active')
-    		AppendSCache.write('\nInactive14()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive14() \n Inactive14()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active13(self): 
     		matches =  self.detection.find_template('13-Active')
-    		AppendSCache.write('\nInactive13()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive13() \n Inactive13()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active12(self): 
     		matches =  self.detection.find_template('12-Active')
-    		AppendSCache.write('\nInactive12()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive12() \n Inactive12()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active11(self): 
     		matches =  self.detection.find_template('11-Active')
-    		AppendSCache.write('\nInactive11()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive11() \n Inactive11()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active10(self): 
     		matches =  self.detection.find_template('10-Active')
-    		AppendSCache.write('\nInactive10()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive10() \n Inactive10()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active09(self): 
     		matches =  self.detection.find_template('09-Active')
-    		AppendSCache.write('\nInactive09()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive09() \n Inactive09()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active08(self): 
     		matches =  self.detection.find_template('08-Active')
-    		AppendSCache.write('\nInactive08()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive08() \n Inactive08()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active07(self): 
     		matches =  self.detection.find_template('07-Active')
-    		AppendSCache.write('\nInactive07()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive07() \n Inactive07()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active06(self): 
     		matches =  self.detection.find_template('06-Active')
-    		AppendSCache.write('\nInactive06()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive06() \n Inactive06()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active05(self): 
     		matches =  self.detection.find_template('05-Active')
-    		AppendSCache.write('\nInactive05()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive05() \n Inactive05()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active04(self): 
     		matches =  self.detection.find_template('04-Active')
-    		AppendSCache.write('\nInactive04()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive04() \n Inactive04()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active03(self): 
     		matches =  self.detection.find_template('03-Active')
-    		AppendSCache.write('\nInactive03()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive03() \n Inactive03()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active02(self): 
     		matches =  self.detection.find_template('02-Active')
-    		AppendSCache.write('\nInactive02()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive02() \n Inactive02()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
 
     	def Active01(self): 
     		matches =  self.detection.find_template('01-Active')
-    		AppendSCache.write('\nInactive01()') 
+    		AppendSCache.write('\nfrom Bot_Logic.y import Inactive01() \n Inactive01()') 
     		AppendSCache.close()
     		time.sleep(activerefresh)
     		return np.shape(matches)[1] >= 1
@@ -452,7 +452,7 @@ NewPuzzle = True
     			self.Active17()
     		else CaptureTBuffer + 1 if CaptureTBuffer == CaptureTBufferlimt:
     		     self.state == ('Puzzle complete')
-    		     self.log('Puzzle complete proberly')  
+    		     self.log('Puzzle complete properly')  
 
 
 
@@ -460,7 +460,7 @@ NewPuzzle = True
     def run(self): 
     	while True:
     		self.detection.refresh_frame()
-    		if self state == 'not started' and self.findChar('Char_Select'):
+    		if self.findChar('Char_Select'):
     			self.log('can see qeust giver')
     			self.find_Char()
     			self.state = 'started'
@@ -486,8 +486,30 @@ NewPuzzle = True
     			self.state('In Capture mode') 
     			NewPuzzle = False
             elif self.state == 'Puzzle complete'
-    			self.log('Reading Cache')
-                from
+    			self.log('loading and solvling Sequence')
+                from sequence_cache import Sequence
+                Sequence.run()
+                time.sleep(0.2)
+                NewPuzzle = True 
+            elif self.FinishQeust('Finish_Qeust'):
+                self.log('Quest finished')
+                self.FinishQeust() 
+                self.state ='in Qeust complete menu'
+            elif self.state == 'in Qeust complete menu' and self.CloseLoot('Close_Loot'):
+                self.log('closing qeust menu')
+                self.Close_Loot() 
+                self.state = 'in Loot menu'
+            elif self.state == 'in Loot menu' and self.keep('keep'):
+                self.log('keeping loot')
+                self.keep() 
+                self.state = 'In game world'
+            elif self.state == 'In game world' and self.ScreenTransition('Screen_Transition'):
+                self.log('Moving back to start')
+                self.ScreenTransition() 
+                self.state = 'In game world'
+            
+
+
 
 
 
