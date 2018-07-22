@@ -2,6 +2,7 @@ import time
 from pynput.mouse import Button, Controller as MouseController 
 
 class controller():
+    print('controls now active')
     def __init__(self):
             self.mouse = MouseController()
 

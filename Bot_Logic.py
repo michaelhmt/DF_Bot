@@ -9,8 +9,8 @@ import time
 #CaptureTBuffer = 0
 #game enter = 0
 
-class Game: 
-
+class BotAction: 
+ print("is in logic")
  AppendSCache = open('sequence_cache.py','a')
  ClearSCache = open('sequence_cache.py','w' )
  ReadSCache  = open('sequence_cache.py','r' ).readlines()
@@ -24,10 +24,11 @@ class Game:
  def __init__(self, detection, controller):
        self.detection = detection
        self.controller = controller
-       self.state = 'not started'
+       self.state = 'In game world'
 
  def log(self, text):
        print('[%s] %s' % (time.strftime('%H:%M:%S'), text))
+       print('debuglog')
 
  def can_see_Object(self, template, threshold=0.9): 
      matches = self.detection.find_template(template,threshold=threshold)
@@ -41,13 +42,18 @@ class Game:
      time.sleep(0.5)
 
  def findChar(self): 
-           matches =  self.detection.find_template('Char_Select')
-           x = matches[1][0]
-           y = matches[0][0]
-           self.controller.move_mouse(x+40, y+60)
-           self.controller.left_mouse_click()
-           time.sleep(0.5)
+           matches = self.detection.find_template('Char_Select', threshold=0.9)
            return np.shape(matches)[1] >= 1
+ def clickChar(self):
+      matches = self.detection.find_template('Char_Select')
+
+      x= matches[1][0]
+      y= matches[0][0]
+
+      self.controller.move_mouse(x+40, y+60)
+      self.controller.left_mouse_click()
+
+      time.sleep(0.5)
 
  def MenuQuest(self): 
             matches =  self.detection.find_template('Quest-Strat_01')
@@ -391,14 +397,20 @@ class Game:
             time.sleep(activerefresh)
             return np.shape(matches)[1] >= 1
 
- def FinishQeust(self): 
-            matches =  self.detection.find_template('Finish_Qeust')
+ def FinishQeust(self):
+      matches = self.detection.find_template('Finish_Qeust', threshold=0.9)
+      return np.shape(matches)[1] >= 1
+
+ def ClickFinishQeust(self):
+            matches = self.detection.find_template('Finish_Qeust')
+
             x = matches[1][0]
             y = matches[0][0]
+
             self.controller.move_mouse(x+100, y+30)
             self.controller.left_mouse_click()
+
             time.sleep(0.5)
-            return np.shape(matches)[1] >= 1
 
  def CloseLoot(self): 
             matches =  self.detection.find_template('Close_Loot')
@@ -497,29 +509,31 @@ class Game:
                 Sequence.run()
 
 
- def run(self): 
-    global NewPuzzle
-    while True:
+ def activate(self): 
+      print('Activate loop')
+      global NewPuzzle
+      while True:
         self.detection.refresh_frame()
-        if self.findChar('Char_Select'):
+        print("Bot is searching")
+        if self.findChar():
             self.log('can see qeust giver')
-            self.find_Char()
+            self.clickChar()
             self.state = 'started'
         elif self.state == 'started' and self.MenuQuest('Quest-Strat_01'):
             self.log('Found Qeust enter')
-            self.MenuQuest() 
+            #self.MenuQuest() 
             self.state = 'in menu' 
         elif self.state == 'in menu' and self.SelectQuest('Quest-Selection'):
             self.log('found qeust selection')
-            self.SelectQuest() 
+            #self.SelectQuest() 
             self.state = 'in menu'
         elif self.state == 'in menu' and self.QuestEnter('Quest-Enter'):
             self.log('found qeust selection')
-            self.QuestEnter() 
+            #self.QuestEnter() 
             self.state = 'in Dialogue'
         elif self.state == 'in Dialogue' and self.ConvoClickZone('Convo_Click-Zone'):
             self.log('clicking through convo')
-            self.ConvoClickZone() 
+            #self.ConvoClickZone() 
             self.state = 'in Dialogue'
         elif self.state == 'in Dialogue' and self.GameTrigger('GameTrigger') and NewPuzzle == True:
             self.log('game in progress')
@@ -531,21 +545,21 @@ class Game:
             time.sleep(0.2)
             self.Solve()
             NewPuzzle == True 
-        elif self.FinishQeust('Finish_Qeust'):
+        elif self.FinishQeust():
             self.log('Quest finished')
-            self.FinishQeust() 
+            self.ClickFinishQeust() 
             self.state ='in Qeust complete menu'
         elif self.state == 'in Qeust complete menu' and self.CloseLoot('Close_Loot'):
             self.log('closing qeust menu')
-            self.Close_Loot() 
+            #self.Close_Loot() 
             self.state = 'in Loot menu'
         elif self.state == 'in Loot menu' and self.keep('keep'):
             self.log('keeping loot')
-            self.keep() 
+            #self.keep() 
             self.state = 'In game world'
         elif self.state == 'In game world' and self.ScreenTransition('Screen_Transition'):
             self.log('Moving back to start')
-            self.ScreenTransition() 
+            #self.ScreenTransition() 
             self.state = 'In game world'
         else:
             self.log('not doing anything')
