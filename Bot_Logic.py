@@ -24,25 +24,25 @@ class BotAction:
  def __init__(self, detection, controller):
        self.detection = detection
        self.controller = controller
-       self.state = 'In game world'
+       self.state = 'Nothing'
 
  def log(self, text):
        print('[%s] %s' % (time.strftime('%H:%M:%S'), text))
-       print('debuglog')
+       print(self.state)
 
- def can_see_Object(self, template, threshold=0.9): 
-     matches = self.detection.find_template(template,threshold=threshold)
-     return np.shape(matches)[1] >= 1
- def click_object(self, template, offset=(0, 0)):
-     matches = self.detection.find_template(template)
-     x = matches [1][0] + offset[0]
-     y = matches [0][0] + offset[1]
-     self.controller.move_mouse(x, y)
-     self.controller.left_mouse_click()
-     time.sleep(0.5)
+ #def can_see_Object(self, template, threshold=0.9): 
+     #matches = self.detection.find_template(template,threshold=threshold)
+     #return np.shape(matches)[1] >= 1
+ #def click_object(self, template, offset=(0, 0)):
+     #matches = self.detection.find_template(template)
+     #x = matches [1][0] + offset[0]
+     #y = matches [0][0] + offset[1]
+     #self.controller.move_mouse(x, y)
+     #self.controller.left_mouse_click()
+     #time.sleep(0.5)
 
  def findChar(self): 
-           matches = self.detection.find_template('Char_Select', threshold=0.9)
+           matches = self.detection.find_template('Char_Select')
            return np.shape(matches)[1] >= 1
  def clickChar(self):
       matches = self.detection.find_template('Char_Select')
@@ -519,7 +519,7 @@ class BotAction:
       while True:
         self.detection.refresh_frame()
         print("Bot is searching")
-        if self.findChar():
+        if self.state =='Nothing' and self.findChar():
             self.log('can see qeust giver')
             self.clickChar()
             self.state = 'started'
@@ -565,7 +565,7 @@ class BotAction:
             self.log('Moving back to start')
             self.ClickScreeTransition()
             #self.ScreenTransition() 
-            self.state = 'In game world'
+            self.state = 'Nothing'
         else:
             self.log('not doing anything')
             time.sleep(1)
