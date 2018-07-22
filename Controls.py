@@ -4,7 +4,7 @@ from pynput.mouse import Button, Controller as MouseController
 class controller():
     print('controls now active')
     def __init__(self):
-            self.mouse = MouseController()
+        self.mouse = MouseController()
 
     def move_mouse(self, x , y):
 
@@ -27,15 +27,15 @@ class controller():
             y
         )
                 
-        def left_mouse_click(self): 
-            self.mouse.click(Button.left) 
+    def left_mouse_click(self): 
+     self.mouse.click(Button.left) 
 
-        def left_mouse_drag(self, start, end):
-         self.move_mouse(*start)
-         time.sleep(0.2)
-         self.mouse.press(Button.left)
-         time.sleep(0.2)
-         self.move_mouse(*end)
-         time.sleep(0.2)
-         self.mouse.release(Button.left)
-         time.sleep(0.2) 
+    def left_mouse_drag(self, start, end):
+     self.move_mouse(*start)
+     time.sleep(0.2)
+     self.mouse.press(Button.left)
+     time.sleep(0.2)
+     self.move_mouse(*end)
+     time.sleep(0.2)
+     self.mouse.release(Button.left)
+     time.sleep(0.2) 

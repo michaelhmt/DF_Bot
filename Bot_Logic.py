@@ -398,8 +398,8 @@ class BotAction:
             return np.shape(matches)[1] >= 1
 
  def FinishQeust(self):
-      matches = self.detection.find_template('Finish_Qeust', threshold=0.9)
-      return np.shape(matches)[1] >= 1
+       matches = self.detection.find_template('Finish_Qeust', threshold=0.9)
+       return np.shape(matches)[1] >= 1
 
  def ClickFinishQeust(self):
             matches = self.detection.find_template('Finish_Qeust')
@@ -430,14 +430,18 @@ class BotAction:
             time.sleep(0.5)
             return np.shape(matches)[1] >= 1
 
- def ScreenTransition(self): 
-            matches =  self.detection.find_template('Screen_Transition')
+ def findScreenTransition(self): 
+            matches =  self.detection.find_template('Screen_Transition',threshold=0.9)
+            return np.shape(matches)[1] >= 1
+ def ClickScreeTransition(self): 
+            matches = self.detection.find_template('Screen_Transition')
             x = matches[1][0]
             y = matches[0][0]
             self.controller.move_mouse(x+00, y+40)
             self.controller.left_mouse_click()
             time.sleep(0.5)
-            return np.shape(matches)[1] >= 1
+
+            
 
  def GameTrigger(self): 
             matches =  self.detection.find_template('GameTrigger')
@@ -505,8 +509,8 @@ class BotAction:
         self.log('Puzzle completed properly')  
 
  def Solve(self): 
-                from sequence_cache import Sequence
-                Sequence.run()
+       from sequence_cache import Sequence
+       Sequence.run()
 
 
  def activate(self): 
@@ -519,23 +523,23 @@ class BotAction:
             self.log('can see qeust giver')
             self.clickChar()
             self.state = 'started'
-        elif self.state == 'started' and self.MenuQuest('Quest-Strat_01'):
+        elif self.state == 'started' and self.MenuQuest():
             self.log('Found Qeust enter')
             #self.MenuQuest() 
             self.state = 'in menu' 
-        elif self.state == 'in menu' and self.SelectQuest('Quest-Selection'):
+        elif self.state == 'in menu' and self.SelectQuest():
             self.log('found qeust selection')
             #self.SelectQuest() 
             self.state = 'in menu'
-        elif self.state == 'in menu' and self.QuestEnter('Quest-Enter'):
+        elif self.state == 'in menu' and self.QuestEnter():
             self.log('found qeust selection')
             #self.QuestEnter() 
             self.state = 'in Dialogue'
-        elif self.state == 'in Dialogue' and self.ConvoClickZone('Convo_Click-Zone'):
+        elif self.state == 'in Dialogue' and self.ConvoClickZone():
             self.log('clicking through convo')
             #self.ConvoClickZone() 
             self.state = 'in Dialogue'
-        elif self.state == 'in Dialogue' and self.GameTrigger('GameTrigger') and NewPuzzle == True:
+        elif self.state == 'in Dialogue' and self.GameTrigger() and NewPuzzle == True:
             self.log('game in progress')
             self.capture()
             self.state('In Capture mode') 
@@ -549,16 +553,17 @@ class BotAction:
             self.log('Quest finished')
             self.ClickFinishQeust() 
             self.state ='in Qeust complete menu'
-        elif self.state == 'in Qeust complete menu' and self.CloseLoot('Close_Loot'):
+        elif self.state == 'in Qeust complete menu' and self.CloseLoot():
             self.log('closing qeust menu')
             #self.Close_Loot() 
             self.state = 'in Loot menu'
-        elif self.state == 'in Loot menu' and self.keep('keep'):
+        elif self.state == 'in Loot menu' and self.keep():
             self.log('keeping loot')
             #self.keep() 
             self.state = 'In game world'
-        elif self.state == 'In game world' and self.ScreenTransition('Screen_Transition'):
+        elif self.state == 'In game world' and self.findScreenTransition():
             self.log('Moving back to start')
+            self.ClickScreeTransition()
             #self.ScreenTransition() 
             self.state = 'In game world'
         else:
