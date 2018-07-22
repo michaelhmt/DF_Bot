@@ -5,8 +5,8 @@ from detection import DetectionC
 from Controls import controller
 from Bot_Logic import Game 
 
-detection = Detection()
-Controls = Controller()
+detection = DetectionC()
+Controls = controller()
 game = Game(detection, controller)
 
 game.run
